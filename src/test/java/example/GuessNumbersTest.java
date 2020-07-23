@@ -72,5 +72,13 @@ public class GuessNumbersTest {
     }
 
 
+    @Test
+    void should_return_0_when_checkNumbersDifference_given_1234(){
+        GuessNumbers guessNumbers = new GuessNumbers();
+        int[] imputNumber={1,2,3,4} ;
+        String result = guessNumbers.checkNumbersDifference(imputNumber);
+        Assertions.assertEquals(result, "0");
+    }
+
 
 }

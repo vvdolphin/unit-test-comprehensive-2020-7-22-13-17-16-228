@@ -33,4 +33,8 @@ public class GuessNumbers {
 
 
     }
+
+    public String checkNumbersDifference(int[] imputNumber) {
+        return "0";
+    }
 }
