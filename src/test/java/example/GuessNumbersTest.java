@@ -45,4 +45,12 @@ public class GuessNumbersTest {
         Assertions.assertEquals(result, "0");
     }
 
+    @Test
+    void should_return_Wrong_Input_Input_again_when_checkNumbersLength_given_3(){
+        GuessNumbers guessNumbers = new GuessNumbers();
+        int imputNumber=3 ;
+        String result = guessNumbers.checkNumbersLength(imputNumber);
+        Assertions.assertEquals(result, "Wrong Input，Input again");
+    }
+
 }

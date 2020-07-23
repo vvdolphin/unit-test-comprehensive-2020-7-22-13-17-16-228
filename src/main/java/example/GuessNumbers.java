@@ -18,6 +18,6 @@ public class GuessNumbers {
         if (inputNumber ==4){
             return "0";
         }
-        return null;
+        return "Wrong Input，Input again";
     }
 }
