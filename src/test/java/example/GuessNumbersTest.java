@@ -63,6 +63,14 @@ public class GuessNumbersTest {
 
     }
 
+    @Test
+    void should_return_Wrong_Input_Input_again_when_checkNumbersRange_given_10234(){
+        GuessNumbers guessNumbers = new GuessNumbers();
+        int[] imputNumber={10,2,3,4} ;
+        String result = guessNumbers.checkNumbersRange(imputNumber);
+        Assertions.assertEquals(result, "Wrong Input，Input again");
+    }
+
 
 
 }
