@@ -5,4 +5,8 @@ public class GuessNumbers {
         int[] result= {1,2,3,4};
         return result;
     }
+
+    public String checkTimes(int i) {
+        return "0";
+    }
 }

@@ -20,4 +20,17 @@ public class GuessNumbersTest {
         }
         Assertions.assertEquals(nums, "1234");
     }
+
+    @Test
+    void should_return_0_when_checkTimes_given_6(){
+        GuessNumbers guessNumbers = new GuessNumbers();
+        int imputNumber= 0;
+        String result = guessNumbers.checkTimes(0);
+        Assertions.assertEquals(result, "0");
+
+
+
+    }
+
+
 }
