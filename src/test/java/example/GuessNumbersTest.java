@@ -30,11 +30,19 @@ public class GuessNumbersTest {
     }
 
     @Test
-    void should_return_Wrong_Input_Input_again_when_checkTimes_given_6(){
+    void should_return_outOfTimes_when_checkTimes_given_6(){
         GuessNumbers guessNumbers = new GuessNumbers();
         int imputNumber= 6;
         String result = guessNumbers.checkTimes(imputNumber);
-        Assertions.assertEquals(result, "Wrong Input，Input again");
+        Assertions.assertEquals(result, "outOfTimes");
+    }
+
+    @Test
+    void should_return_4_when_checkNumbersLength_given_4(){
+        GuessNumbers guessNumbers = new GuessNumbers();
+        int imputNumber=4 ;
+        String result = guessNumbers.checkNumbersLength(imputNumber);
+        Assertions.assertEquals(result, "0");
     }
 
 }

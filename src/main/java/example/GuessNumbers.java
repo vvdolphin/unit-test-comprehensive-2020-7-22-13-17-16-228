@@ -10,7 +10,11 @@ public class GuessNumbers {
         if (i<6){
             return "0";
         }else {
-            return "Wrong Input，Input again";
+            return "outOfTimes";
         }
+    }
+
+    public String checkNumbersLength(int imputNumber) {
+        return "0";
     }
 }
