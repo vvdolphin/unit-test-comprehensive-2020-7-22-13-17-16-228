@@ -47,4 +47,9 @@ public class GuessNumbers {
         }
         return "Wrong Input,Input again";
     }
+
+    public String checkResult(int[] inputNumber, int[] answer) {
+        return "null";
+
+    }
 }

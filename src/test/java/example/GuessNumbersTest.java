@@ -88,4 +88,15 @@ public class GuessNumbersTest {
         Assertions.assertEquals(result, "Wrong Input,Input again");
     }
 
+    @Test
+    void shoud_return_4A0B_when_checkResult_given_1234(){
+        GuessNumbers guessNumbers = new GuessNumbers();
+        int[] answer = guessNumbers.generateResult();
+        int[] inputNumber = {1,2,3,4};
+        String result = guessNumbers.checkResult(inputNumber,answer);
+        Assertions.assertEquals(result, "4A0B");
+
+    }
+
+
 }
