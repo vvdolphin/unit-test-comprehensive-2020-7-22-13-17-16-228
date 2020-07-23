@@ -124,5 +124,15 @@ public class GuessNumbersTest {
         Assertions.assertEquals(result, "2A1B");
     }
 
+    @Test
+    void shoud_return_0A1B_when_checkResult_given_5748(){
+        GuessNumbers guessNumbers = new GuessNumbers();
+        int[] answer = guessNumbers.generateResult();
+        int[] inputNumber = {5,7,4,8};
+        String result = guessNumbers.checkResult(inputNumber,answer);
+        Assertions.assertEquals(result, "0A1B");
+    }
+
+
 
 }
