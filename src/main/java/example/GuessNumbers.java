@@ -7,6 +7,10 @@ public class GuessNumbers {
     }
 
     public String checkTimes(int i) {
-        return "0";
+        if (i<6){
+            return "0";
+        }else {
+            return "Wrong Input，Input again";
+        }
     }
 }

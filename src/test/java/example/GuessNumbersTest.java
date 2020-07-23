@@ -22,14 +22,11 @@ public class GuessNumbersTest {
     }
 
     @Test
-    void should_return_0_when_checkTimes_given_6(){
+    void should_return_0_when_checkTimes_given_5(){
         GuessNumbers guessNumbers = new GuessNumbers();
-        int imputNumber= 0;
-        String result = guessNumbers.checkTimes(0);
+        int imputNumber= 5;
+        String result = guessNumbers.checkTimes(5);
         Assertions.assertEquals(result, "0");
-
-
-
     }
 
 
