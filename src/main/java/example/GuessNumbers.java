@@ -23,7 +23,7 @@ public class GuessNumbers {
     }
 
     public String checkNumbersRange(int[] imputNumber) {
-        return null;
+        return "0";
 
     }
 }
