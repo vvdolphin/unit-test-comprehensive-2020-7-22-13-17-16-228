@@ -133,6 +133,16 @@ public class GuessNumbersTest {
         Assertions.assertEquals(result, "0A1B");
     }
 
+    @Test
+    void shoud_return_0A0B_when_checkResult_given_5678(){
+        GuessNumbers guessNumbers = new GuessNumbers();
+        int[] answer = guessNumbers.generateResult();
+        int[] inputNumber = {5,6,7,8};
+        String result = guessNumbers.checkResult(inputNumber,answer);
+        Assertions.assertEquals(result, "0A0B");
+    }
+
+
 
 
 }
