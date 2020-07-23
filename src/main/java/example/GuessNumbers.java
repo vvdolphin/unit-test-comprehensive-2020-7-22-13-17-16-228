@@ -23,8 +23,7 @@ public class GuessNumbers {
     }
 
     public String checkNumbersRange(int[] imputNumber) {
-        for (int i :
-                imputNumber) {
+        for (int i :imputNumber) {
             if (i>=10){
                 return "Wrong Input，Input again";
             }
