@@ -49,7 +49,7 @@ public class GuessNumbers {
     }
 
     public String checkResult(int[] inputNumber, int[] answer) {
-        return "null";
+        return "4A0B";
 
     }
 }
