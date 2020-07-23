@@ -21,4 +21,9 @@ public class GuessNumbers {
             return "Wrong Input，Input again";
         }
     }
+
+    public String checkNumbersRange(int[] imputNumber) {
+        return null;
+
+    }
 }

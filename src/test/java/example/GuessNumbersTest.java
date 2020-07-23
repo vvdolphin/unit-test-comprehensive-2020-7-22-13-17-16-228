@@ -53,4 +53,16 @@ public class GuessNumbersTest {
         Assertions.assertEquals(result, "Wrong Input，Input again");
     }
 
+    @Test
+    void sholud_return_0_when_checkNumbersRange_given_1234(){
+        GuessNumbers guessNumbers = new GuessNumbers();
+        int[] imputNumber = {1,2,3,4} ;
+        String result = guessNumbers.checkNumbersRange(imputNumber);
+        Assertions.assertEquals(result, "0");
+
+
+    }
+
+
+
 }
