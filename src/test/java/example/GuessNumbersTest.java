@@ -38,7 +38,7 @@ public class GuessNumbersTest {
     }
 
     @Test
-    void should_return_4_when_checkNumbersLength_given_4(){
+    void should_return_0_when_checkNumbersLength_given_4(){
         GuessNumbers guessNumbers = new GuessNumbers();
         int imputNumber=4 ;
         String result = guessNumbers.checkNumbersLength(imputNumber);
