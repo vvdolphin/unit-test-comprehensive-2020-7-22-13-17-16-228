@@ -2,6 +2,7 @@ package example;
 
 public class GuessNumbers {
     public int[] generateResult() {
-        return null;
+        int[] result= {1,2,3,4};
+        return result;
     }
 }
