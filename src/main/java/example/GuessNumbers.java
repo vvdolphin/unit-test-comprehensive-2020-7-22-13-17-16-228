@@ -15,9 +15,10 @@ public class GuessNumbers {
     }
 
     public String checkNumbersLength(int inputNumber) {
-        if (inputNumber ==4){
+        if (inputNumber == 4){
             return "0";
+        }else {
+            return "Wrong Input，Input again";
         }
-        return "Wrong Input，Input again";
     }
 }
