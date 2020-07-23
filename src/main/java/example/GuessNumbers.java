@@ -45,6 +45,6 @@ public class GuessNumbers {
         if (set.size()== 4){
             return "0";
         }
-        return null;
+        return "null";
     }
 }

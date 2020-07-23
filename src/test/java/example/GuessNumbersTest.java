@@ -80,5 +80,12 @@ public class GuessNumbersTest {
         Assertions.assertEquals(result, "0");
     }
 
+    @Test
+    void should_return_Wrong_Input_Input_again_when_checkNumbersDifference_given_1134(){
+        GuessNumbers guessNumbers = new GuessNumbers();
+        int[] imputNumber={1,1,3,4} ;
+        String result = guessNumbers.checkNumbersDifference(imputNumber);
+        Assertions.assertEquals(result, "Wrong Input,Input again");
+    }
 
 }
