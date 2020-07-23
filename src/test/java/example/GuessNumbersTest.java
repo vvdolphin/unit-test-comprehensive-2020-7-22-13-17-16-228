@@ -25,9 +25,16 @@ public class GuessNumbersTest {
     void should_return_0_when_checkTimes_given_5(){
         GuessNumbers guessNumbers = new GuessNumbers();
         int imputNumber= 5;
-        String result = guessNumbers.checkTimes(5);
+        String result = guessNumbers.checkTimes(imputNumber);
         Assertions.assertEquals(result, "0");
     }
 
+    @Test
+    void should_return_Wrong_Input_Input_again_when_checkTimes_given_6(){
+        GuessNumbers guessNumbers = new GuessNumbers();
+        int imputNumber= 6;
+        String result = guessNumbers.checkTimes(imputNumber);
+        Assertions.assertEquals(result, "Wrong Input，Input again");
+    }
 
 }
