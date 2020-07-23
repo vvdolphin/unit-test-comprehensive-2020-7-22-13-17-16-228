@@ -95,8 +95,18 @@ public class GuessNumbersTest {
         int[] inputNumber = {1,2,3,4};
         String result = guessNumbers.checkResult(inputNumber,answer);
         Assertions.assertEquals(result, "4A0B");
-
     }
+
+    @Test
+    void shoud_return_2A2B_when_checkResult_given_1432(){
+        GuessNumbers guessNumbers = new GuessNumbers();
+        int[] answer = guessNumbers.generateResult();
+        int[] inputNumber = {1,4,3,2};
+        String result = guessNumbers.checkResult(inputNumber,answer);
+        Assertions.assertEquals(result, "2A2B");
+    }
+
+
 
 
 }
