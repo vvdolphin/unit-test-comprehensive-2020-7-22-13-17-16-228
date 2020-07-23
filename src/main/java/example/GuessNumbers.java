@@ -49,7 +49,16 @@ public class GuessNumbers {
     }
 
     public String checkResult(int[] inputNumber, int[] answer) {
-        return "4A0B";
+        boolean flag = true;
+        for (int i=0;i<inputNumber.length;i++) {
+            if (inputNumber[i] !=answer[i]){
+                flag=false;
+            }
+        }
+        if (flag){
+            return "4A0B";
+        }
+        return "2A2B";
 
     }
 }
