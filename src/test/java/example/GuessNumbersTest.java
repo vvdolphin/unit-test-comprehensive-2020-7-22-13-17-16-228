@@ -107,10 +107,10 @@ public class GuessNumbersTest {
     }
 
     @Test
-    void shoud_return_0A4B_when_checkResult_given_3241(){
+    void shoud_return_0A4B_when_checkResult_given_2341(){
         GuessNumbers guessNumbers = new GuessNumbers();
         int[] answer = guessNumbers.generateResult();
-        int[] inputNumber = {3,2,4,1};
+        int[] inputNumber = {2,3,4,1};
         String result = guessNumbers.checkResult(inputNumber,answer);
         Assertions.assertEquals(result, "0A4B");
     }
