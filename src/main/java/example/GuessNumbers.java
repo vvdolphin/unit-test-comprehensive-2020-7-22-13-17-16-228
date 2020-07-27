@@ -43,16 +43,13 @@ public class GuessNumbers {
         }
     }
 
-    public String checkNumbersRange(int[] imputNumber) {
-        for (int i :imputNumber) {
-            if (i>=10){
+    public String checkNumbersRange(int[] inputNumber) {
+        for (int i :inputNumber) {
+            if (i>=10 || i<0){
                 return "Wrong Input,Input again";
             }
         }
         return "0";
-
-
-
     }
 
     public String checkNumbersDifference(int[] inputNumber) {
