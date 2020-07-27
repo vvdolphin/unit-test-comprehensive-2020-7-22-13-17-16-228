@@ -139,4 +139,12 @@ public class GuessNumbersTest {
         Assertions.assertEquals(result, "0A0B");
     }
 
+    @Test
+    void should_return_0_when_isLegle_given_1234(){
+        Game game = new Game();
+        int[] inputNumber = {1,2,3,4};
+        String result = game.isLegle(inputNumber);
+        Assertions.assertEquals(result, "000");
+    }
+
 }

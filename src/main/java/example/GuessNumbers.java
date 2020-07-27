@@ -4,7 +4,7 @@ import java.util.Arrays;
 import java.util.HashSet;
 
 public class GuessNumbers {
-    private int times=6;
+    private int times = 6;
     private int numLength = 4;
 
     public int getNumLength() {
@@ -24,29 +24,29 @@ public class GuessNumbers {
     }
 
     public int[] generateResult() {
-        int[] result= {1,2,3,4};
+        int[] result = {1, 2, 3, 4};
         return result;
     }
 
     public String checkTimes(int i) {
-        if (i<times){
+        if (i < times) {
             return "0";
-        }else {
+        } else {
             return "outOfTimes";
         }
     }
 
     public String checkNumbersLength(int inputNumber) {
-        if (inputNumber == numLength){
+        if (inputNumber == numLength) {
             return "0";
-        }else {
+        } else {
             return "Wrong Input,Input again";
         }
     }
 
     public String checkNumbersRange(int[] inputNumber) {
-        for (int i :inputNumber) {
-            if (i>=10 || i<0){
+        for (int i : inputNumber) {
+            if (i >= 10 || i < 0) {
                 return "Wrong Input,Input again";
             }
         }
@@ -55,28 +55,40 @@ public class GuessNumbers {
 
     public String checkNumbersDifference(int[] inputNumber) {
         HashSet set = new HashSet();
-        Arrays.stream(inputNumber).forEach(i->set.add(i));
-
-        if (set.size()== numLength){
+        Arrays.stream(inputNumber).forEach(i -> set.add(i));
+        if (set.size() == numLength) {
             return "0";
         }
         return "Wrong Input,Input again";
     }
 
     public String checkResult(int[] inputNumber, int[] answer) {
+        int countA = getA(inputNumber, answer);
+        int countB = getB(inputNumber, answer);
+        return countA + "A" + countB + "B";
+    }
+
+    private int getA(int[] inputNumber, int[] answer) {
         int countA = 0;
-        int countB = 0;
-        for (int i=0;i<inputNumber.length;i++) {
-            if (inputNumber[i] ==answer[i]){
+        for (int i = 0; i < inputNumber.length; i++) {
+            if (inputNumber[i] == answer[i]) {
                 countA++;
-            }else{
-                for(int j=0;j<inputNumber.length;j++){
-                    if (inputNumber[i]==answer[j] && i !=j){
-                        countB++;
-                    }
+            }
+        }
+        return countA;
+    }
+
+    private int getB(int[] inputNumber, int[] answer) {
+        int countB = 0;
+        for (int i = 0; i < inputNumber.length; i++) {
+            for (int j = 0; j < inputNumber.length; j++) {
+                if (inputNumber[i] == answer[j] && i != j) {
+                    countB++;
                 }
             }
         }
-        return countA+"A"+countB+"B";
+        return countB;
     }
+
+
 }
