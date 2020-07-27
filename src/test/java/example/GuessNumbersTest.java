@@ -140,7 +140,7 @@ public class GuessNumbersTest {
     }
 
     @Test
-    void should_return_0_when_isLegle_given_1234(){
+    void should_return_000_when_isLegle_given_1234(){
         Game game = new Game();
         int[] inputNumber = {1,2,3,4};
         String result = game.isLegle(inputNumber);
@@ -148,7 +148,7 @@ public class GuessNumbersTest {
     }
 
     @Test
-    void should_return_wrong_Input_when_isLegle_given_1234(){
+    void should_return_00_when_isLegle_given_1234(){
         Game game = new Game();
         int[] inputNumber = {1,2,2,4};
         String result = game.isLegle(inputNumber);

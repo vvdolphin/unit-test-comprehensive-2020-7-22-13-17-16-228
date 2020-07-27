@@ -1,7 +1,10 @@
 package example;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashSet;
+import java.util.List;
+import java.util.stream.Collectors;
 
 public class GuessNumbers {
     private int times = 6;
@@ -88,6 +91,18 @@ public class GuessNumbers {
             }
         }
         return countB;
+    }
+
+    public String isLegle(int[] inputNumbers){
+        return   getResult(inputNumbers).stream().filter(item ->item.equals("0")).collect(Collectors.joining());
+    }
+
+    private List<String> getResult(int[] inputNumbers){
+        List<String> result = new ArrayList<>();
+        result.add(checkNumbersDifference(inputNumbers));
+        result.add(checkNumbersLength(inputNumbers.length));
+        result.add(checkNumbersRange(inputNumbers));
+        return result;
     }
 
 

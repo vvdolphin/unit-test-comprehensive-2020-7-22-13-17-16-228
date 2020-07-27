@@ -9,15 +9,19 @@ public class Game {
     private GuessNumbers guessNumbers = new GuessNumbers();
 
 
-    public String isLegle(int[] inputNumbers){
-        List<String> result = new ArrayList<>();
-        result.add(guessNumbers.checkNumbersDifference(inputNumbers));
-        result.add(guessNumbers.checkNumbersLength(inputNumbers.length));
-        result.add(guessNumbers.checkNumbersRange(inputNumbers));
-        String msg= result.stream().filter(item ->item.equals("0")).collect(Collectors.joining());
-        return msg;
-    }
 
+
+
+    public void game(){
+        int times = guessNumbers.getTimes();
+        for (int i = 0; i <times ; i++) {
+
+        }
+
+
+
+
+    }
 
 
 
