@@ -147,4 +147,13 @@ public class GuessNumbersTest {
         Assertions.assertEquals(result, "000");
     }
 
+    @Test
+    void should_return_wrong_Input_when_isLegle_given_1234(){
+        Game game = new Game();
+        int[] inputNumber = {1,2,2,4};
+        String result = game.isLegle(inputNumber);
+        Assertions.assertEquals(result, "00");
+    }
+
+
 }
