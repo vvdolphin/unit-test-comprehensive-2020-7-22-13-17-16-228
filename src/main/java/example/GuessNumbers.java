@@ -3,13 +3,23 @@ package example;
 import java.util.HashSet;
 
 public class GuessNumbers {
+    private int times=6;
+
+    public int getTimes() {
+        return times;
+    }
+
+    public void setTimes(int times) {
+        this.times = times;
+    }
+
     public int[] generateResult() {
         int[] result= {1,2,3,4};
         return result;
     }
 
     public String checkTimes(int i) {
-        if (i<6){
+        if (i<times){
             return "0";
         }else {
             return "outOfTimes";
@@ -20,14 +30,14 @@ public class GuessNumbers {
         if (inputNumber == 4){
             return "0";
         }else {
-            return "Wrong Input，Input again";
+            return "Wrong Input,Input again";
         }
     }
 
     public String checkNumbersRange(int[] imputNumber) {
         for (int i :imputNumber) {
             if (i>=10){
-                return "Wrong Input，Input again";
+                return "Wrong Input,Input again";
             }
         }
         return "0";

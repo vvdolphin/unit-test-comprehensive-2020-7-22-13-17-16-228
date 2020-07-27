@@ -3,9 +3,6 @@ package example;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
-import org.mockito.Mockito;
-
-import static org.mockito.BDDMockito.given;
 
 public class GuessNumbersTest {
     @Test
@@ -50,7 +47,7 @@ public class GuessNumbersTest {
         GuessNumbers guessNumbers = new GuessNumbers();
         int imputNumber=3 ;
         String result = guessNumbers.checkNumbersLength(imputNumber);
-        Assertions.assertEquals(result, "Wrong Input，Input again");
+        Assertions.assertEquals(result, "Wrong Input,Input again");
     }
 
     @Test
@@ -68,7 +65,7 @@ public class GuessNumbersTest {
         GuessNumbers guessNumbers = new GuessNumbers();
         int[] imputNumber={10,2,3,4} ;
         String result = guessNumbers.checkNumbersRange(imputNumber);
-        Assertions.assertEquals(result, "Wrong Input，Input again");
+        Assertions.assertEquals(result, "Wrong Input,Input again");
     }
 
 
@@ -141,8 +138,5 @@ public class GuessNumbersTest {
         String result = guessNumbers.checkResult(inputNumber,answer);
         Assertions.assertEquals(result, "0A0B");
     }
-
-
-
 
 }
