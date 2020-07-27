@@ -4,6 +4,15 @@ import java.util.HashSet;
 
 public class GuessNumbers {
     private int times=6;
+    private int numLength = 4;
+
+    public int getNumLength() {
+        return numLength;
+    }
+
+    public void setNumLength(int numLength) {
+        this.numLength = numLength;
+    }
 
     public int getTimes() {
         return times;
@@ -27,7 +36,7 @@ public class GuessNumbers {
     }
 
     public String checkNumbersLength(int inputNumber) {
-        if (inputNumber == 4){
+        if (inputNumber == numLength){
             return "0";
         }else {
             return "Wrong Input,Input again";
