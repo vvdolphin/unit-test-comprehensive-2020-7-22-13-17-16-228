@@ -11,16 +11,10 @@ public class Game {
     private HashMap<String,String> results = new HashMap<>();
     private String correctAnswer ="4A0B";
 
-
-    public static void main(String[] args) {
-        Game game = new Game();
-        game.game();
-    }
-
     public void game(){
         int[] answer = guessNumbers.generateResult();
         for (int i = 0; i <guessNumbers.getTimes(); i++) {
-            System.out.println("input number");
+            System.out.println("input numbers");
             int[] inputNumbers = getNumbers();
             guessNumber(inputNumbers, answer);
         }
