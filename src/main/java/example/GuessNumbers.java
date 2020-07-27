@@ -93,7 +93,7 @@ public class GuessNumbers {
         return countB;
     }
 
-    public String isLegle(int[] inputNumbers){
+    public String isLegal(int[] inputNumbers){
         return   getResult(inputNumbers).stream().filter(item ->item.equals("0")).collect(Collectors.joining());
     }
 
