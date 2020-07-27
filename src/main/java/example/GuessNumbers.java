@@ -1,5 +1,6 @@
 package example;
 
+import java.util.Arrays;
 import java.util.HashSet;
 
 public class GuessNumbers {
@@ -54,11 +55,9 @@ public class GuessNumbers {
 
     public String checkNumbersDifference(int[] inputNumber) {
         HashSet set = new HashSet();
-        for (int i :
-                inputNumber) {
-            set.add(i);
-        }
-        if (set.size()== 4){
+        Arrays.stream(inputNumber).forEach(i->set.add(i));
+
+        if (set.size()== numLength){
             return "0";
         }
         return "Wrong Input,Input again";
