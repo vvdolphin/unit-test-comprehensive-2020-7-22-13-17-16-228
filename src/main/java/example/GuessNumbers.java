@@ -1,11 +1,5 @@
 package example;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.HashSet;
-import java.util.List;
-import java.util.stream.Collectors;
-
 public class GuessNumbers {
     private int times = 6;
     private int numLength = 4;
@@ -27,42 +21,11 @@ public class GuessNumbers {
     }
 
     public int[] generateResult() {
-        int[] result = {1, 2, 3, 4};
-        return result;
+        return new int[]{1, 2, 3, 4};
     }
 
     public String checkTimes(int i) {
-        if (i < times) {
-            return "0";
-        } else {
-            return "outOfTimes";
-        }
-    }
-
-    public String checkNumbersLength(int inputNumber) {
-        if (inputNumber == numLength) {
-            return "0";
-        } else {
-            return "Wrong Input,Input again";
-        }
-    }
-
-    public String checkNumbersRange(int[] inputNumber) {
-        for (int i : inputNumber) {
-            if (i >= 10 || i < 0) {
-                return "Wrong Input,Input again";
-            }
-        }
-        return "0";
-    }
-
-    public String checkNumbersDifference(int[] inputNumber) {
-        HashSet set = new HashSet();
-        Arrays.stream(inputNumber).forEach(i -> set.add(i));
-        if (set.size() == numLength) {
-            return "0";
-        }
-        return "Wrong Input,Input again";
+        return i < times ?"0":"outOfTimes";
     }
 
     public String checkResult(int[] inputNumber, int[] answer) {
@@ -93,17 +56,9 @@ public class GuessNumbers {
         return countB;
     }
 
-    public String isLegal(int[] inputNumbers){
-        return   getResult(inputNumbers).stream().filter(item ->item.equals("0")).collect(Collectors.joining());
+    public boolean isLegal(int[] inputNumbers){
+        Valitor valitor = new Valitor();
+        return  valitor.getResult(inputNumbers);
     }
-
-    private List<String> getResult(int[] inputNumbers){
-        List<String> result = new ArrayList<>();
-        result.add(checkNumbersDifference(inputNumbers));
-        result.add(checkNumbersLength(inputNumbers.length));
-        result.add(checkNumbersRange(inputNumbers));
-        return result;
-    }
-
 
 }

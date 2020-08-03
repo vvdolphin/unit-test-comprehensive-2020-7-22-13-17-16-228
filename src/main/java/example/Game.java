@@ -1,9 +1,7 @@
 package example;
 
 
-import java.util.Arrays;
 import java.util.HashMap;
-import java.util.HashSet;
 import java.util.Scanner;
 
 public class Game {
@@ -39,8 +37,8 @@ public class Game {
     }
 
 
-    private boolean isLegal(int[] inputNumbers){
-        return "000".equals(guessNumbers.isLegal(inputNumbers));
+    public boolean isLegal(int[] inputNumbers){
+        return guessNumbers.isLegal(inputNumbers);
     }
 
     private void printResult(int[] inputNumbers,int[] answer){
